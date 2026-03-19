@@ -1,4 +1,3 @@
-// ─── COUNTDOWN ───
 (function () {
   const second = 1000,
         minute = second * 60,
@@ -36,15 +35,5 @@
       }, 0);
 }());
 
-// ─── SPOILER ───
 var divToggleVis = document.getElementById('spoiler_text');
-var button = document.getElementById('spoiler_button');
-
-button.onclick = function () {
-  if (divToggleVis.className === 'fadeout') {
-    divToggleVis.className = 'fadein';
-  } else {
-    divToggleVis.className = 'fadeout';
-  }
-  if (button.innerHTML === 'Узнать') {
-    button.innerHTML
+var button = document.ge
