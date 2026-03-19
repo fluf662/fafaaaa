@@ -2,93 +2,112 @@
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Open Sans', sans-serif;
-  height: 100%;
+body {
   margin: 0;
-  background: url("https://images.unsplash.com/photo-1617788138017-80ad40651399");
-  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  background: url("https://images.unsplash.com/photo-1617788138017-80ad40651399") no-repeat center/cover;
 }
 
-.box {
+/* затемнение */
+body::before {
+  content: "";
+  position: fixed;
   width: 100%;
-  padding: 0 15px;
-  margin: auto;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
-.landing {
-  position: relative;
-}
-
-.landing .header {
-  padding: 10px 0;
-}
-
+/* меню */
 .links {
   text-align: right;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .links li {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .links a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
+.links a:hover {
+  color: #00ffff;
+}
+
+/* текст */
 .info {
-  margin-top: 120px;
+  position: relative;
+  z-index: 2;
+  margin: 120px 20px;
+  max-width: 600px;
 }
 
 .info h1 {
   color: white;
-  font-size: 44px;
+  font-size: 48px;
 }
 
 .info p {
-  color: aqua;
+  color: #ddd;
+  font-size: 18px;
 }
 
+/* кнопка */
 button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background: #6c63ff;
-  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
   border: none;
+  background: linear-gradient(45deg, #6c63ff, #00ffff);
+  color: white;
   cursor: pointer;
+  margin-top: 20px;
 }
 
-.container {
-  text-align: center;
-  color: yellow;
+button:hover {
+  transform: scale(1.05);
 }
 
-li {
-  display: inline-block;
-  padding: 10px;
-}
-
-li span {
-  display: block;
-  font-size: 40px;
-}
-
+/* спойлер */
 .fadeout {
   opacity: 0;
   height: 0;
-  transition: 1s;
+  overflow: hidden;
 }
 
 .fadein {
   opacity: 1;
-  height: auto;
-  transition: 1s;
+  margin-top: 10px;
 }
 
-#additional p {
-  color: yellow;
+/* таймер */
+.container {
   text-align: center;
+  color: white;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.container li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.container span {
+  display: block;
+  font-size: 40px;
+  color: #00ffff;
+}
+
+/* текст снизу */
+#additional {
+  text-align: center;
+  color: #ccc;
+  margin-top: 20px;
 }
