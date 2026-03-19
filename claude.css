@@ -176,3 +176,19 @@ button:focus { outline: none; }
   li span { font-size: calc(3rem * var(--smaller)); }
   .landing .header { flex-direction: column; gap: 16px; }
 }
+
+#spoiler_toggle {
+  display: none;
+}
+
+#spoiler_text {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  transition: max-height 0.8s ease, opacity 0.8s ease !important;
+}
+
+#spoiler_toggle:checked ~ #spoiler_text {
+  max-height: 500px !important;
+  opacity: 1 !important;
+}
