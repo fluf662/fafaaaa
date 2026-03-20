@@ -8,17 +8,28 @@
 
         day = hour * 24;
 
-  let today = new Date(),
+   let today = new Date(),
+
       dd = String(today.getDate()).padStart(2, "0"),
+
       mm = String(today.getMonth() + 1).padStart(2, "0"),
+
       yyyy = today.getFullYear(),
+
       nextYear = yyyy + 1,
-      dayMonth = "04/30/",
+
+      dayMonth = "05/15/",  //дата окончания
+
       date = dayMonth + yyyy;
 
+  
+
   today = mm + "/" + dd + "/" + yyyy;
+
   if (today > date) {
+
     date = dayMonth + nextYear;
+
   }
 
   const countDown = new Date(date).getTime(),
